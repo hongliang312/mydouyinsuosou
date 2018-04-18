@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/re"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161823"
+    tools:context="hongliang.com.mydouyinsuosou.view.MainActivity">
+
+
+  <!--  <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="1dp"
+        android:id="@+id/tiaomu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/header_scan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/header_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:background="@mipmap/gb" />
+
+        <ImageView
+            android:id="@+id/susuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/header_image"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/sousuo" />
+        <EditText
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/header_scan"
+            android:layout_toRightOf="@+id/header_scan"
+            android:background="@drawable/yuanjiao"
+            android:gravity="center_vertical"
+            android:paddingLeft="45dp"
+            android:hint="请输入要搜索的内容"
+            android:textColorHint="#242329"
+            android:textColor="#56575E"
+            android:textSize="22dp"  />
+    </RelativeLayout>-->
+
+
+
+    <RelativeLayout
+        android:background="#0E0F1A"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.stx.xhb.xbanner.XBanner
+                    android:id="@+id/showXBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:AutoPlayTime="3000"
+                    app:tipTextColor="#FFFFFFFF"
+                    app:tipTextSize="16.0sp"></com.stx.xhb.xbanner.XBanner>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/showXRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/showXBanner"
+                    android:layout_marginTop="5dp"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+            </RelativeLayout>
+
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
